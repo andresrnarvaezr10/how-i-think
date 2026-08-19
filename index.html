@@ -30,6 +30,10 @@ a{color:inherit}
 .nav{position:sticky;top:0;z-index:20;background:rgba(245,245,242,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .navin{max-width:1180px;margin:auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:15px;font-weight:500;letter-spacing:.08em}.nav a{text-decoration:none;margin-left:25px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.lang-switch{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:2px;margin-left:25px;background:rgba(255,255,255,.45)}
+.lang-switch button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:11px;letter-spacing:.1em;padding:7px 10px;border-radius:999px;cursor:pointer}
+.lang-switch button.active{background:var(--ink);color:#fff}
+.lang-switch button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .hero{max-width:1180px;margin:auto;padding:120px 28px 110px;min-height:88vh;display:flex;align-items:flex-end}
 .hero-inner{max-width:1080px}
 .kicker,.label{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
@@ -88,22 +92,26 @@ h2{font-size:clamp(46px,6vw,82px);line-height:.92;letter-spacing:-.035em;font-we
   <div class="navin">
     <div class="logo">ANDRÉS R. NARVÁEZ</div>
     <div>
-      <a href="#curiosity">Curiosity</a>
-      <a href="#perspectives">Perspectives</a>
-      <a href="#communication">Communication</a>
-      <a href="#ai">AI</a>
+      <a href="#curiosity" data-en="Curiosity" data-es="Curiosidad">Curiosity</a>
+      <a href="#perspectives" data-en="Perspectives" data-es="Perspectivas">Perspectives</a>
+      <a href="#communication" data-en="Communication" data-es="Comunicación">Communication</a>
+      <a href="#ai" data-en="AI" data-es="IA">AI</a>
+      <span class="lang-switch" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </span>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="hero-inner">
-    <div class="kicker">Creative Director · Creative Thinking · Strategic Creativity</div>
-    <h1>Creativity is a way of thinking before it is a way of making.</h1>
-    <p>Curiosity creates questions. Perspectives create possibilities. Creativity turns them into something we can share.</p>
+    <div class="kicker" data-en="Creative Director · Creative Thinking · Strategic Creativity" data-es="Creative Director · Pensamiento Creativo · Creatividad Estratégica">Creative Director · Creative Thinking · Strategic Creativity</div>
+    <h1 data-en="Creativity is a way of thinking before it is a way of making." data-es="La creatividad es una forma de pensar antes que una forma de hacer.">Creativity is a way of thinking before it is a way of making.</h1>
+    <p data-en="Curiosity creates questions. Perspectives create possibilities. Creativity turns them into something we can share." data-es="La curiosidad crea preguntas. Las perspectivas crean posibilidades. La creatividad las convierte en algo que podemos compartir.">Curiosity creates questions. Perspectives create possibilities. Creativity turns them into something we can share.</p>
     <div class="cta">
-      <a class="btn primary" href="#curiosity">Explore</a>
-      <a class="btn" href="https://www.linkedin.com/in/andrewsupernova" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn primary" href="#curiosity" data-en="Explore" data-es="Explorar">Explore</a>
+      <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener" data-en="LinkedIn" data-es="LinkedIn">LinkedIn</a>
     </div>
     <div style="margin-top:58px;border:1px solid var(--line);overflow:hidden;background:#151515">
       <img src="hero.png" alt="Curiosity, Perspective and Possibility — Andrés R. Narváez" style="display:block;width:100%;height:auto">
@@ -113,101 +121,121 @@ h2{font-size:clamp(46px,6vw,82px);line-height:.92;letter-spacing:-.035em;font-we
 
 <section id="curiosity">
   <div class="sectionhead">
-    <h2>01 / Curiosity</h2>
-    <div class="intro">I am curious about what could be different.</div>
+    <h2 data-en="01 / Curiosity" data-es="01 / Curiosidad">01 / Curiosity</h2>
+    <div class="intro" data-en="I am curious about what could be different." data-es="Me da curiosidad descubrir qué podría ser diferente.">I am curious about what could be different.</div>
   </div>
   <div class="thinking">
     <article class="thought">
-      <div class="number">QUESTION</div>
-      <div><h3>What if?</h3><p>Curiosity often begins with a question, a contradiction, or something that does not quite make sense yet.</p></div>
-      <div class="word">Explore</div>
+      <div class="number" data-en="QUESTION" data-es="PREGUNTAR">QUESTION</div>
+      <div><h3 data-en="What if?" data-es="¿Y si...?">What if?</h3><p data-en="Curiosity often begins with a question, a contradiction, or something that does not quite make sense yet." data-es="La curiosidad suele comenzar con una pregunta, una contradicción o algo que todavía no termina de tener sentido.">Curiosity often begins with a question, a contradiction, or something that does not quite make sense yet.</p></div>
+      <div class="word" data-en="Explore" data-es="Explorar">Explore</div>
     </article>
     <article class="thought">
-      <div class="number">INVESTIGATE</div>
-      <div><h3>Look closer.</h3><p>Investigation gives curiosity a direction. It turns an instinct into something we can examine.</p></div>
-      <div class="word">Discover</div>
+      <div class="number" data-en="INVESTIGATE" data-es="INVESTIGAR">INVESTIGATE</div>
+      <div><h3 data-en="Look closer." data-es="Mira más de cerca.">Look closer.</h3><p data-en="Investigation gives curiosity a direction. It turns an instinct into something we can examine." data-es="Investigar le da dirección a la curiosidad. Convierte un instinto en algo que podemos observar y comprender.">Investigation gives curiosity a direction. It turns an instinct into something we can examine.</p></div>
+      <div class="word" data-en="Discover" data-es="Descubrir">Discover</div>
     </article>
     <article class="thought">
-      <div class="number">POSSIBILITY</div>
-      <div><h3>What else?</h3><p>The goal is not novelty for its own sake. It is finding a possibility that was not visible before.</p></div>
-      <div class="word">Expand</div>
+      <div class="number" data-en="POSSIBILITY" data-es="POSIBILIDAD">POSSIBILITY</div>
+      <div><h3 data-en="What else?" data-es="¿Qué más?">What else?</h3><p data-en="The goal is not novelty for its own sake. It is finding a possibility that was not visible before." data-es="El objetivo no es la novedad por sí misma. Es encontrar una posibilidad que antes no podíamos ver.">The goal is not novelty for its own sake. It is finding a possibility that was not visible before.</p></div>
+      <div class="word" data-en="Expand" data-es="Expandir">Expand</div>
     </article>
   </div>
 </section>
 
 <section id="perspectives" class="perspective">
   <div class="perspective-inner">
-    <div class="label">02 / Perspectives</div>
-    <h2>Change the perspective.<br>Change the possibility.</h2>
-    <p class="perspective-copy">Look with the eyes of a child. Try to see through someone else's experience. Reinterpret what seems fixed. A problem does not always have to remain the problem we first thought it was.</p>
+    <div class="label" data-en="02 / Perspectives" data-es="02 / Perspectivas">02 / Perspectives</div>
+    <h2 data-en="Change the perspective.<br>Change the possibility." data-es="Cambia la perspectiva.<br>Cambia la posibilidad.">Change the perspective.<br>Change the possibility.</h2>
+    <p class="perspective-copy" data-en="Look with the eyes of a child. Try to see through someone else's experience. Reinterpret what seems fixed. A problem does not always have to remain the problem we first thought it was." data-es="Mira con los ojos de un niño. Intenta ver desde la experiencia de alguien más. Reinterpreta lo que parece fijo. Un problema no siempre tiene que seguir siendo el problema que creímos que era.">Look with the eyes of a child. Try to see through someone else's experience. Reinterpret what seems fixed. A problem does not always have to remain the problem we first thought it was.</p>
     <div class="faces">
-      <div class="face"><strong>Me</strong><span>What I see</span></div>
-      <div class="face"><strong>You</strong><span>What you experience</span></div>
-      <div class="face"><strong>Them</strong><span>What others see</span></div>
-      <div class="face"><strong>Else</strong><span>Another point of view</span></div>
-      <div class="face"><strong>Unexpected</strong><span>What we did not consider</span></div>
+      <div class="face"><strong data-en="Me" data-es="Yo">Me</strong><span data-en="What I see" data-es="Lo que veo">What I see</span></div>
+      <div class="face"><strong data-en="You" data-es="Tú">You</strong><span data-en="What you experience" data-es="Lo que experimentas">What you experience</span></div>
+      <div class="face"><strong data-en="Them" data-es="Ellos">Them</strong><span data-en="What others see" data-es="Lo que otros ven">What others see</span></div>
+      <div class="face"><strong data-en="Else" data-es="Otro lugar">Else</strong><span data-en="Another point of view" data-es="Otra perspectiva">Another point of view</span></div>
+      <div class="face"><strong data-en="Unexpected" data-es="Lo inesperado">Unexpected</strong><span data-en="What we did not consider" data-es="Lo que no habíamos considerado">What we did not consider</span></div>
     </div>
   </div>
 </section>
 
 <section id="communication">
   <div class="sectionhead">
-    <h2>03 / Communication</h2>
-    <div class="intro">Ideas need a language.</div>
+    <h2 data-en="03 / Communication" data-es="03 / Comunicación">03 / Communication</h2>
+    <div class="intro" data-en="Ideas need a language." data-es="Las ideas necesitan un lenguaje.">Ideas need a language.</div>
   </div>
-  <p style="font-size:clamp(34px,5vw,70px);line-height:1.02;max-width:1000px;margin:0 0 45px;font-weight:400">Different problems require different ways to express an idea, emotion or experience.</p>
+  <p style="font-size:clamp(34px,5vw,70px);line-height:1.02;max-width:1000px;margin:0 0 45px;font-weight:400" data-en="Different problems require different ways to express an idea, emotion or experience." data-es="Problemas diferentes requieren formas diferentes de expresar una idea, una emoción o una experiencia.">Different problems require different ways to express an idea, emotion or experience.</p>
   <div class="languages">
-    <span class="lang">Image</span>
-    <span class="lang">Word</span>
-    <span class="lang">Story</span>
-    <span class="lang">Sound</span>
-    <span class="lang">Motion</span>
-    <span class="lang">Experience</span>
+    <span class="lang" data-en="Image" data-es="Imagen">Image</span>
+    <span class="lang" data-en="Word" data-es="Palabra">Word</span>
+    <span class="lang" data-en="Story" data-es="Historia">Story</span>
+    <span class="lang" data-en="Sound" data-es="Sonido">Sound</span>
+    <span class="lang" data-en="Motion" data-es="Motion">Motion</span>
+    <span class="lang" data-en="Experience" data-es="Experiencia">Experience</span>
   </div>
 </section>
 
 <section class="possibility">
   <div>
-    <div class="label">04 / Possibility</div>
-    <h2>What if the answer is not the answer?</h2>
+    <div class="label" data-en="04 / Possibility" data-es="04 / Posibilidad">04 / Possibility</div>
+    <h2 data-en="What if the answer is not the answer?" data-es="¿Y si la respuesta no fuera la respuesta?">What if the answer is not the answer?</h2>
     <div class="sequence">
-      <span>Problem</span><span class="arrow">→</span>
-      <span>Perspective</span><span class="arrow">→</span>
-      <span>Possibility</span><span class="arrow">→</span>
-      <span>Connection</span>
+      <span data-en="Problem" data-es="Problema">Problem</span><span class="arrow">→</span>
+      <span data-en="Perspective" data-es="Perspectiva">Perspective</span><span class="arrow">→</span>
+      <span data-en="Possibility" data-es="Posibilidad">Possibility</span><span class="arrow">→</span>
+      <span data-en="Connection" data-es="Conexión">Connection</span>
     </div>
   </div>
 </section>
 
 <section id="ai" class="ai">
   <div class="sectionhead">
-    <h2>05 / Human Creativity × AI</h2>
-    <div class="intro">A tool for expansion, not a replacement for thinking.</div>
+    <h2 data-en="05 / Human Creativity × AI" data-es="05 / Creatividad Humana × IA">05 / Human Creativity × AI</h2>
+    <div class="intro" data-en="A tool for expansion, not a replacement for thinking." data-es="Una herramienta para expandir posibilidades, no un reemplazo del pensamiento.">A tool for expansion, not a replacement for thinking.</div>
   </div>
   <div class="ai-grid">
-    <div class="ai-quote">AI can generate possibilities.<br><br>Human creativity decides which ones matter.</div>
+    <div class="ai-quote" data-en="AI can generate possibilities.<br><br>Human creativity decides which ones matter." data-es="La IA puede generar posibilidades.<br><br>La creatividad humana decide cuáles importan.">AI can generate possibilities.<br><br>Human creativity decides which ones matter.</div>
     <div class="ai-list">
-      <span>Explore.</span>
-      <span>Expand.</span>
-      <span>Visualize.</span>
-      <span>Prototype.</span>
-      <span>Question again.</span>
+      <span data-en="Explore." data-es="Explorar.">Explore.</span>
+      <span data-en="Expand." data-es="Expandir.">Expand.</span>
+      <span data-en="Visualize." data-es="Visualizar.">Visualize.</span>
+      <span data-en="Prototype." data-es="Prototipar.">Prototype.</span>
+      <span data-en="Question again." data-es="Volver a preguntar.">Question again.</span>
     </div>
   </div>
 </section>
 
 <section class="end">
   <div class="end-inner">
-    <div class="label">06 / Still exploring</div>
-    <h2>I'm still exploring.</h2>
-    <p>More than 20 years have given me experience. Curiosity keeps giving me somewhere to go.</p>
+    <div class="label" data-en="06 / Still exploring" data-es="06 / Sigo explorando">06 / Still exploring</div>
+    <h2 data-en="I'm still exploring." data-es="Sigo explorando.">I'm still exploring.</h2>
+    <p data-en="More than 20 years have given me experience. Curiosity keeps giving me somewhere to go." data-es="Más de 20 años me han dado experiencia. La curiosidad sigue dándome hacia dónde ir.">More than 20 years have given me experience. Curiosity keeps giving me somewhere to go.</p>
   </div>
 </section>
 
 <div class="footer">
   <span>ANDRÉS R. NARVÁEZ</span>
-  <span>Creative Director · Creative Thinking & Strategic Creativity</span>
+  <span data-en="Creative Director · Creative Thinking & Strategic Creativity" data-es="Creative Director · Pensamiento Creativo y Creatividad Estratégica">Creative Director · Creative Thinking & Strategic Creativity</span>
 </div>
+
+<script>
+(function(){
+  const buttons = document.querySelectorAll('.lang-switch button');
+  const translatable = document.querySelectorAll('[data-en][data-es]');
+  function setLanguage(lang){
+    translatable.forEach(el => { el.innerHTML = el.getAttribute('data-' + lang); });
+    buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+    document.documentElement.lang = lang;
+    document.title = lang === 'es'
+      ? 'Cómo Pienso | Andrés R. Narváez'
+      : 'How I Think | Andrés R. Narváez';
+    try { localStorage.setItem('how-i-think-lang', lang); } catch(e) {}
+  }
+  buttons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
+  let saved = 'en';
+  try { saved = localStorage.getItem('how-i-think-lang') || 'en'; } catch(e) {}
+  setLanguage(saved);
+})();
+</script>
 
 </body>
 </html>
